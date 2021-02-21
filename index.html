@@ -8,8 +8,51 @@
 
     <!-- Title -->
     <title>Search CEP</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Link Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Scripts -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
   </head>
+
   <body>
-      
+    <div id="content">
+      <h1>Search CEP</h1>
+
+      <input
+        type="text"
+        class="form-control"
+        onkeypress="$(this).mask('00000-000')"
+      />
+
+      <button>Search</button>
+
+      <div id="result" class="hide">
+        <h3>CEP:</h3>
+        <h3>State:</h3>
+        <h3>City:</h3>
+        <h3>Street:</h3>
+      </div>
+
+      <div id="error" class="hide">
+        <h3 id="error-message">Error! Check your CEP and try again</h3>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
   </body>
 </html>

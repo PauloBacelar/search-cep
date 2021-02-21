@@ -1,0 +1,40 @@
+body {
+  background-color: rgb(217, 235, 225);
+  font-family: "Roboto", sans-serif;
+}
+
+#content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+input {
+  outline: none;
+  padding: 5px;
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  margin: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#error-message {
+  color: #ff0033;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.hide {
+  display: none;
+}
