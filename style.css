@@ -1,6 +1,11 @@
+html,
 body {
-  background-color: rgb(217, 235, 225);
+  width: 99%;
+  height: 99%;
+  background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
   font-family: "Roboto", sans-serif;
+  color: white;
+  min-width: 200px;
 }
 
 #content {
@@ -8,6 +13,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: auto;
 }
 
 h1 {
@@ -27,7 +33,7 @@ button {
 }
 
 #error-message {
-  color: #ff0033;
+  color: #ffffff;
 }
 
 input::-webkit-outer-spin-button,
