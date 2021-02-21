@@ -19,11 +19,12 @@ function checkInput(cepInput) {
 }
 
 function showErrorMessage() {
+  result.classList.add("hide");
   errorMessage.classList.remove("hide");
 }
 
-function cepToNum(cepString) {
-  return Number(cepString.split("-").join(""));
+function formatCEP(cepString) {
+  return cepString.split("-").join("");
 }
 
 function APIDataIsInvalid(apiData) {
@@ -31,6 +32,7 @@ function APIDataIsInvalid(apiData) {
 }
 
 function showResults(apiData) {
+  errorMessage.classList.add("hide");
   result.classList.remove("hide");
 
   resultCEP.textContent = `CEP: ${apiData.cep}`;
@@ -49,7 +51,7 @@ button.addEventListener("click", () => {
     return;
   }
 
-  const cepNumbers = cepToNum(cepString);
+  const cepNumbers = formatCEP(cepString);
   const api = `https://viacep.com.br/ws/${cepNumbers}/json/`;
   fetch(api)
     .then((jsonFile) => {
@@ -61,7 +63,6 @@ button.addEventListener("click", () => {
         return;
       }
 
-      console.log(apiData);
       showResults(apiData);
     });
 });
